@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RocWay.Domain.Entities\RocWay.Domain.Entities.csproj" />
+    <ProjectReference Include="..\RocWay.Domain.Interface\RocWay.Domain.Interface.csproj" />
+    <ProjectReference Include="..\RocWay.Infrastructure.Interface\RocWay.Infrastructure.Interface.csproj" />
+  </ItemGroup>
+
+</Project>
