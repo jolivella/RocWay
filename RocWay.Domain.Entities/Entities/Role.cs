@@ -11,7 +11,5 @@ namespace RocWay.Domain.Entities
         public int RoleId { get; set; }
         public string RoleName { get; set; }
         public bool Active { get; set; }
-
-        public ICollection<AppRole> AppRoles { get; set; }
     }
 }

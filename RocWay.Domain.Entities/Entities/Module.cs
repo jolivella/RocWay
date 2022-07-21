@@ -14,8 +14,5 @@ namespace RocWay.Domain.Entities
         public string Url { get; set; }
         public int AppId { get; set; }
         public bool Active { get; set; }
-
-        public Application Application { get; set; }
-        public ICollection<AppRoleModule> AppRoleModules { get; set; }
     }
 }

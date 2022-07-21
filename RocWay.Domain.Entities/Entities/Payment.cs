@@ -13,7 +13,5 @@ namespace RocWay.Domain.Entities
         public double Paid { get; set; }
         public DateTime PaymentDate { get; set; }
         public string PaidPeriod { get; set; }
-
-        public Contract Contract { get; set; }
     }
 }

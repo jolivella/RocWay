@@ -12,8 +12,5 @@ namespace RocWay.Domain.Entities
         public int AppRoleId { get; set; }
         public int UserId { get; set; }
         public bool Active { get; set; }
-
-        public AppRole AppRole { get; set; }
-        public User User { get; set; }
     }
 }

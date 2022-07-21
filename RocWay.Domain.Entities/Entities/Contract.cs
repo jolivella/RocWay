@@ -19,12 +19,5 @@ namespace RocWay.Domain.Entities
         public double Cost { get; set; }
         public int PaymentFrecuency { get; set; }
         public bool Active { get; set; }
-
-        public Customer Customer { get; set; }
-        public Application Application { get; set; }
-
-        public ICollection<Configuration> Configurations { get; set; }
-        public ICollection<User> Users { get; set; }
-        public ICollection<Payment> Payments { get; set; }
     }
 }

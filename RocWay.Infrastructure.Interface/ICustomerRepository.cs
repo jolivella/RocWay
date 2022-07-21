@@ -11,14 +11,8 @@ namespace RocWay.Infrastructure.Interface
     {
         bool Insert(Customer customer);
         bool Update(Customer customer);
-        bool Delete(Customer customer);
+        bool Delete(int id);
         Customer Get(int id);
         IEnumerable<Customer> GetAll();
-
-        Task<bool> InsertAsync(Customer customer);
-        Task<bool> UpdateAsync(Customer customer);
-        Task<bool> DeleteAsync(Customer customer);
-        Task<Customer> Getasync(int id);
-        Task<IEnumerable<Customer>> GetAllAsync();
     }
 }
