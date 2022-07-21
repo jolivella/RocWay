@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RocWay.Aplication.Interface\RocWay.Application.Interface.csproj" />
+    <ProjectReference Include="..\RocWay.Aplication.Main\RocWay.Application.Main.csproj" />
+    <ProjectReference Include="..\RocWay.Aplication.Validator\RocWay.Application.Validator.csproj" />
+    <ProjectReference Include="..\RocWay.Domain.Core\RocWay.Domain.Core.csproj" />
+    <ProjectReference Include="..\RocWay.Domain.Entities\RocWay.Domain.Entities.csproj" />
+    <ProjectReference Include="..\RocWay.Domain.Interface\RocWay.Domain.Interface.csproj" />
+    <ProjectReference Include="..\RocWay.Infrastructure.Data.EFCore\RocWay.Infrastructure.Data.EFCore.csproj" />
+    <ProjectReference Include="..\RocWay.Infrastructure.Interface\RocWay.Infrastructure.Interface.csproj" />
+    <ProjectReference Include="..\RocWay.Infrastructure.Repository.EFCore\RocWay.Infrastructure.Repository.EFCore.csproj" />
+    <ProjectReference Include="..\RocWay.Transversal.Common\RocWay.Transversal.Common.csproj" />
+    <ProjectReference Include="..\RocWay.Transversal.Loggin\RocWay.Transversal.Loggin.csproj" />
+  </ItemGroup>
+
+</Project>

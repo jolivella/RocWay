@@ -11,54 +11,38 @@ namespace RocWay.Domain.Core
 {
     public class CustomerDomain : ICustomerDomain
     {
-        public bool Delete(string customerId)
+        private readonly ICustomerRepository customerRepository;
+
+        public CustomerDomain(ICustomerRepository CustomerRepository)
         {
-            throw new NotImplementedException();
+            customerRepository = CustomerRepository;
         }
 
-        public Task<bool> DeleteAsync(string customerId)
+        public bool Delete(int customerId)
         {
-            throw new NotImplementedException();
+            return customerRepository.Delete(customerId);
         }
 
-        public Customer Get(string customerId)
+        public Customer Get(int customerId)
         {
-            throw new NotImplementedException();
+            return customerRepository.Get(customerId);
+
         }
 
         public IEnumerable<Customer> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Customer>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Customer> GetAsync(string customerId)
-        {
-            throw new NotImplementedException();
+            return customerRepository.GetAll();
         }
 
         public bool Insert(Customer customer)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> InsertAsync(Customer customer)
-        {
-            throw new NotImplementedException();
+            return customerRepository.Insert(customer);
         }
 
         public bool Update(Customer customer)
         {
-            throw new NotImplementedException();
-        }
+            return customerRepository.Update(customer);
 
-        public Task<bool> UpdateAsync(Customer customer)
-        {
-            throw new NotImplementedException();
         }
     }
 }

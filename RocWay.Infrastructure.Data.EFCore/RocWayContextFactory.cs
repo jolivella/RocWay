@@ -1,7 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.Extensions.Configuration;
+using RocWay.Transversal.Common;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +13,8 @@ namespace RocWay.Infrastructure.Data.EFCore
 {
     public class RocWayContextFactory : IDesignTimeDbContextFactory<RocWayContext>
     {
+       
+
         //public RocWayContext CreateDbContext(string[] args)
         //{
         //    var OptionBuilder = new DbContextOptionsBuilder<RocWayContext>();

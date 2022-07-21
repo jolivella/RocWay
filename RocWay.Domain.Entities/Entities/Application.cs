@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace RocWay.Domain.Entities
 {
-    public class Application:AuditFields
+    public class Application
     {
-        public int AppId { get; set; }
+        public int AppId { get; }
         public string App { get; set; }
         public string ApiSubscriptionKey { get; set; }
         public bool Active { get; set; }
-
-        public ICollection<Contract> Contracts { get; set; }
-        public ICollection<Module> Modules { get; set; }
-        public ICollection<AppRole> AppRoles { get; set; }
     }
 }

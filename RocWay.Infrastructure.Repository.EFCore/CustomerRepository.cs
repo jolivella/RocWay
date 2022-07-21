@@ -6,61 +6,68 @@ using System.Threading.Tasks;
 using RocWay.Infrastructure.Interface;
 using RocWay.Domain.Entities;
 using RocWay.Infrastructure.Data.EFCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace RocWay.Infrastructure.Repository
 {
     public class CustomerRepository : ICustomerRepository
     {
         readonly RocWayContext Context;
-        public CustomerRepository(RocWayContext context) => Context = context;
-        public bool Delete(Customer customer)
+        public CustomerRepository(RocWayContext context)
         {
-            throw new NotImplementedException();
+            Context = context;
         }
-
-        public Task<bool> DeleteAsync(Customer customer)
+        public bool Delete(int customerId)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var customer = Context.Customers.Find(customerId);
+                Context.Entry(customer).State = EntityState.Deleted;
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
         }
 
         public Customer Get(int id)
         {
-            throw new NotImplementedException();
+            return Context.Customers.Find(id);
         }
 
         public IEnumerable<Customer> GetAll()
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<Customer>> GetAllAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Customer> Getasync(int id)
-        {
-            throw new NotImplementedException();
+           return Context.Customers;
         }
 
         public bool Insert(Customer customer)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> InsertAsync(Customer customer)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                Context.Add(customer);
+                Context.SaveChanges();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+            return true;
         }
 
         public bool Update(Customer customer)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> UpdateAsync(Customer customer)
-        {
-            throw new NotImplementedException();
+            try
+            {
+                Context.Entry(customer).State = EntityState.Modified;
+                Context.SaveChanges();
+            }
+            catch(Exception)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

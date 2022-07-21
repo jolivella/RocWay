@@ -14,9 +14,5 @@ namespace RocWay.Domain.Entities
         public string UserName { get; set; }
         public string Password { get; set; }
         public bool Active { get; set; }
-
-        public Contract Contract { get; set; }
-
-        public ICollection<UserAppRole> AppRoles { get; set; }
     }
 }

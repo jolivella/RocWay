@@ -8,12 +8,9 @@ namespace RocWay.Domain.Entities
 {
     public class Configuration
     {
-        public int ConfigurationId { get; set; }
+        public int ConfigurationId { get; }
         public int ContractId { get; set; }
         public bool SingleBD { get; set; }
-        public StringConnection StringConecction { get; set; }
-
-        public Contract Contract { get; set; }
-
+        public string StringConecction { get; set; }
     }
 }

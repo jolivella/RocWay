@@ -13,9 +13,5 @@ namespace RocWay.Domain.Entities
         public int ModuleId { get; set;}
         public int PermissionId { get; set; }
         public bool Active { get; set; }
-
-        public AppRole AppRole { get; set; }
-        public Module Module { get; set; }
-        public Permission Permission { get; set; }
     }
 }

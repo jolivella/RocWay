@@ -8,7 +8,7 @@ namespace RocWay.Domain.Entities
 {
     public class Customer
     {
-        public int TenantId { get; set; } 
+        public int CustomerId { get; set; } 
         public string Nit { get; set; }
         public string RegimenType { get; set; }
         public string CompanyName { get; set; }
@@ -17,7 +17,5 @@ namespace RocWay.Domain.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         public string Logo { get; set; }
-
-        public ICollection<Contract> Contracts { get; set; }
     }
 }

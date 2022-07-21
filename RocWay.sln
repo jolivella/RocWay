@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{DE73C9FF-3BC6-4A1A-8BAE-957C7661481D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Aplication", "Aplication", "{6C402F39-56B4-481F-A123-7384C7F4D654}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6C402F39-56B4-481F-A123-7384C7F4D654}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{093213E5-4A27-4054-AC0F-BADDC1102582}"
 EndProject
@@ -27,15 +27,25 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Domain.Interface", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Domain.Core", "RocWay.Domain.Core\RocWay.Domain.Core.csproj", "{4515F40D-E01A-4431-87EB-62A9F3BA6B10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Aplication.DTO", "RocWay.Aplication.DTO\RocWay.Aplication.DTO.csproj", "{74EDB0F6-524A-4AA0-8874-7C3C1D2B1BA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Application.DTO", "RocWay.Aplication.DTO\RocWay.Application.DTO.csproj", "{74EDB0F6-524A-4AA0-8874-7C3C1D2B1BA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Aplication.Interface", "RocWay.Aplication.Interface\RocWay.Aplication.Interface.csproj", "{43996C1B-FEDF-4F1F-A1C4-7B8A0C42B43E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Application.Interface", "RocWay.Aplication.Interface\RocWay.Application.Interface.csproj", "{43996C1B-FEDF-4F1F-A1C4-7B8A0C42B43E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Aplication.Main", "RocWay.Aplication.Main\RocWay.Aplication.Main.csproj", "{C97EE559-3C91-4174-90F2-186A613B7063}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Application.Main", "RocWay.Aplication.Main\RocWay.Application.Main.csproj", "{C97EE559-3C91-4174-90F2-186A613B7063}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{68400B41-76B7-45DA-8296-1C2328EC0F41}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{79D9841E-C063-4BD1-86EE-08C4578FD68A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Api", "RocWay.Api\RocWay.Api.csproj", "{BF8039AC-E611-4105-9897-56A3F9D36201}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Web", "RocWay.Web\RocWay.Web.csproj", "{D768B04F-CECC-4DBF-AC98-8A381EE20E5B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Application.Validator", "RocWay.Aplication.Validator\RocWay.Application.Validator.csproj", "{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Transversal.Loggin", "RocWay.Transversal.Loggin\RocWay.Transversal.Loggin.csproj", "{4CE63C2F-6628-4817-B5BA-C33598F1DCAA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RocWay.Transversal.Modules", "RocWay.Transversal.Modules\RocWay.Transversal.Modules.csproj", "{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +93,26 @@ Global
 		{C97EE559-3C91-4174-90F2-186A613B7063}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C97EE559-3C91-4174-90F2-186A613B7063}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C97EE559-3C91-4174-90F2-186A613B7063}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF8039AC-E611-4105-9897-56A3F9D36201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF8039AC-E611-4105-9897-56A3F9D36201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF8039AC-E611-4105-9897-56A3F9D36201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF8039AC-E611-4105-9897-56A3F9D36201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D768B04F-CECC-4DBF-AC98-8A381EE20E5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D768B04F-CECC-4DBF-AC98-8A381EE20E5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D768B04F-CECC-4DBF-AC98-8A381EE20E5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D768B04F-CECC-4DBF-AC98-8A381EE20E5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CE63C2F-6628-4817-B5BA-C33598F1DCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CE63C2F-6628-4817-B5BA-C33598F1DCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CE63C2F-6628-4817-B5BA-C33598F1DCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CE63C2F-6628-4817-B5BA-C33598F1DCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +128,11 @@ Global
 		{74EDB0F6-524A-4AA0-8874-7C3C1D2B1BA5} = {6C402F39-56B4-481F-A123-7384C7F4D654}
 		{43996C1B-FEDF-4F1F-A1C4-7B8A0C42B43E} = {6C402F39-56B4-481F-A123-7384C7F4D654}
 		{C97EE559-3C91-4174-90F2-186A613B7063} = {6C402F39-56B4-481F-A123-7384C7F4D654}
+		{BF8039AC-E611-4105-9897-56A3F9D36201} = {093213E5-4A27-4054-AC0F-BADDC1102582}
+		{D768B04F-CECC-4DBF-AC98-8A381EE20E5B} = {79D9841E-C063-4BD1-86EE-08C4578FD68A}
+		{A45A035C-6E0D-4640-BE9C-4A12F6C93CA4} = {6C402F39-56B4-481F-A123-7384C7F4D654}
+		{4CE63C2F-6628-4817-B5BA-C33598F1DCAA} = {032C2E48-A7F8-42D6-B9E0-70B5998F141E}
+		{67931AE4-3E7F-4C12-83AD-CF58B1CDFC3E} = {032C2E48-A7F8-42D6-B9E0-70B5998F141E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10380221-7563-433D-BB70-6C54DEDABD7C}

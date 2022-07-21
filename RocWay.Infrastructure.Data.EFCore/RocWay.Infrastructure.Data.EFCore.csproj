@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RocWay.Domain.Entities\RocWay.Domain.Entities.csproj" />
+    <ProjectReference Include="..\RocWay.Transversal.Common\RocWay.Transversal.Common.csproj" />
   </ItemGroup>
 
 </Project>
