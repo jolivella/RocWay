@@ -12,6 +12,16 @@ builder.Services.AddMapper();
 builder.Services.AddInjection(builder.Configuration);
 builder.Services.AddValidator();
 
+builder.Services.AddCors(options =>
+{
+    var frontendURL = builder.Configuration.GetValue<string>("frontend_url");
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins(frontendURL).AllowAnyMethod().AllowAnyHeader()
+        .WithExposedHeaders(new string[] { "cantidadTotalRegistros" });
+    });
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -22,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 

@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using RocWay.Api.Utils;
 using RocWay.Application.DTO;
 using RocWay.Application.Interface;
+using RocWay.Domain.Entities;
 
 namespace RocWay.Api.Controllers
 {
@@ -77,14 +79,20 @@ namespace RocWay.Api.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll([FromQuery] PaginationDTO paginationDTO)
         {
             var response = customerApplication.GetAll();
+
+            // Para paginacion
+            var queryable = response.Data.AsQueryable();
+            HttpContext.InsertPaginationParametersInHeader(queryable);
+            var customer = queryable.OrderBy(x => x.CompanyName).Paginar(paginationDTO).ToList();
+
             if (!response.IsSuccess)
             {
                 return BadRequest(response.Message);
             }
-            return Ok(response);
+            return Ok(customer);
         }
     }
 }
