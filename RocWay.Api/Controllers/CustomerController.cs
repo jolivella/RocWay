@@ -19,13 +19,13 @@ namespace RocWay.Api.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert([FromBody] CustomerDto customerDto)
+        public IActionResult Insert([FromForm] CreateCustomerDto createCustomerDto)
         {
-            if (customerDto == null)
+            if (createCustomerDto == null)
             {
                 return BadRequest();
             }
-            var response = customerApplication.Insert(customerDto);
+            var response = customerApplication.Insert(createCustomerDto);
             if (!response.IsSuccess)
             {
                 return BadRequest(response.Message);

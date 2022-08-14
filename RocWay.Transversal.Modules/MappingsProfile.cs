@@ -10,6 +10,7 @@ namespace RocWay.Transversal.Modules
         public MappingsProfile()
         {
             CreateMap<Customer, CustomerDto>().ReverseMap();
+            CreateMap<Customer, CreateCustomerDto>().ReverseMap();
             //CreateMap<Users, UsersDto>().ReverseMap();
 
             //CreateMap<Customers, CustomersDto>().ReverseMap()
