@@ -5,6 +5,7 @@ using RocWay.Domain.Interface;
 using AutoMapper;
 using RocWay.Transversal.Common;
 using RocWay.Application.Validator;
+using FluentValidation;
 
 namespace RocWay.Application.Main
 {
@@ -87,14 +88,14 @@ namespace RocWay.Application.Main
             return response;
         }
 
-        public Response<bool> Insert(CustomerDto customersDto)
+        public Response<bool> Insert(CreateCustomerDto createCustomerDto)
         {
             //Ejemplo uso de FluentValidation
-            var validation = validations.Validate(customersDto);
+            var validation = validations.Validate(createCustomerDto);
             var response = new Response<bool>();
             try
             {
-                var customer = mapper.Map<Customer>(customersDto);
+                var customer = mapper.Map<Customer>(createCustomerDto);
                 response.Data = customerDomain.Insert(customer);
                 if (response.Data)
                 {

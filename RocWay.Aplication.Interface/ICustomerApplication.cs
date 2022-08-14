@@ -10,7 +10,7 @@ namespace RocWay.Application.Interface
 {
     public interface ICustomerApplication
     {
-        Response<bool> Insert(CustomerDto customersDto);
+        Response<bool> Insert(CreateCustomerDto customersDto);
         Response<bool> Update(CustomerDto customersDto);
         Response<bool> Delete(int customerId);
 

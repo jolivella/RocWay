@@ -8,7 +8,7 @@ using RocWay.Application.DTO;
 
 namespace RocWay.Application.Validator
 {
-    public class CustomerValidator: AbstractValidator<CustomerDto>
+    public class CustomerValidator: AbstractValidator<CreateCustomerDto>
     {
         public CustomerValidator()
         {
