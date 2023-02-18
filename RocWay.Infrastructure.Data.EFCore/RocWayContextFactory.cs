@@ -13,7 +13,7 @@ namespace RocWay.Infrastructure.Data.EFCore
 {
     public class RocWayContextFactory : IDesignTimeDbContextFactory<RocWayContext>
     {
-       
+
 
         //public RocWayContext CreateDbContext(string[] args)
         //{
@@ -23,10 +23,17 @@ namespace RocWay.Infrastructure.Data.EFCore
         //    return new RocWayContext(OptionBuilder.Options);
         //}
 
+        //public RocWayContext CreateDbContext(string[] args)
+        //{
+        //    var OptionBuilder = new DbContextOptionsBuilder<RocWayContext>();
+        //    OptionBuilder.UseNpgsql("Host=localhost;Port=5432;Username=RocWay_App_web;Password=RocWay@RocSoft2022;Database=RocWay;");
+        //    return new RocWayContext(OptionBuilder.Options);
+        //}
+
         public RocWayContext CreateDbContext(string[] args)
         {
             var OptionBuilder = new DbContextOptionsBuilder<RocWayContext>();
-            OptionBuilder.UseNpgsql("Host=localhost;Port=5432;Username=RocWay_App_web;Password=RocWay@RocSoft2022;Database=RocWay;");
+            OptionBuilder.UseNpgsql("Host=trumpet.db.elephantsql.com;Port=5432;Username=optrxonm;Password=Ybu5-17zvL1cpH6R3WubdUHyg89azsgA;Database=optrxonm");
             return new RocWayContext(OptionBuilder.Options);
         }
     }
