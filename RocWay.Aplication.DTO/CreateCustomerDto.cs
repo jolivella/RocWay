@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -24,7 +25,6 @@ namespace RocWay.Application.DTO
         public string Phone { get; set; }
         [Required, DataType(DataType.EmailAddress), MaxLength(100)]
         public string Email { get; set; }
-        [Required, MaxLength(1000)]
-        public string Logo { get; set; }
+        public IFormFile Logo { get; set; }
     }
 }
